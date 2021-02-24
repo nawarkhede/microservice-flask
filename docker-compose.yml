@@ -17,3 +17,7 @@ services:
       - "8001:5000"
     depends_on:
       - db
+
+  queue:
+    build: .
+    command: python consumer.py
